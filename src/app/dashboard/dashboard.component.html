@@ -1,0 +1,21 @@
+<h2>Responsive Table</h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+            <tr>
+                <th>Airline</th>
+                <th>Time</th>
+                <th>Depature</th>
+                <th>Arrival</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of flightList">
+                <td>{{item.estDepartureAirport}}</td>
+                <td>{{item.lastSeen}}</td>
+                <td>{{item.estDepartureAirportVertDistance}}</td>
+                <td>{{item.estArrivalAirportVertDistance}}</td>
+                
+            </tr>
+            <div>

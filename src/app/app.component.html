@@ -1,0 +1,6 @@
+<div *ngIf="!verified" class="login">
+  <input [(ngModel)]="uname" type="text" placeholder="Username">
+  <input [(ngModel)]="password" type="password" placeholder="Password" />
+  <button (click)="authenticate()">Login</button>
+</div>
+<router-outlet></router-outlet>
