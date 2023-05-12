@@ -27,36 +27,19 @@ export class DashboardComponent {
       
   }
 
-  // items:()=> Promise<any[]>;
-  items: any[] = []
+ convertTime = function(data:number){
+    return new Date(data*1000).toTimeString()
+  }
+ 
   flightList:any[]=[]
-    // items:any[]=this.FlightData
+
   constructor(private service:FlightsService) {
-    this.items = [{
-      name: "gost",
-      age: 21,
-      gender:"male"
-    },
-    {
-      name: "inner",
-      age: 25,
-      gender:"female"
-      },
-    {
-      name: "lie",
-      age: 31,
-      gender:"male"
-      },
-    {
-      name: "truth",
-      age: 24,
-      gender:"male"
-    }]
   }
     ngOnInit(){
     // Initialization code goes here
       this.service.getData().subscribe((data) => {
         console.log(data);
+        // getting the first 100 valuse
         this.flightList = data.slice(101)
    // do something with the data
 });

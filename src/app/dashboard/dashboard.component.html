@@ -13,7 +13,7 @@
         <tbody>
             <tr *ngFor="let item of flightList">
                 <td>{{item.estDepartureAirport}}</td>
-                <td>{{item.lastSeen}}</td>
+                <td>{{convertTime(item.lastSeen)}}</td>
                 <td>{{item.estDepartureAirportVertDistance}}</td>
                 <td>{{item.estArrivalAirportVertDistance}}</td>
                 
